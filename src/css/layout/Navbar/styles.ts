@@ -4,13 +4,15 @@ export const Container = styled('nav', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
+  position: 'fixed',
+  top: 0,
   padding: '55px 210px',
   boxShadow: '0px 0px 25px 5px rgba(0,0,0,0.2)',
 
   variants: {
     color: {
       primary: {
-        color: '#FFFAFA'
+        backgroundColor: '#FFFAFA'
       }
     },
     size: {
