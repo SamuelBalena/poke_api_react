@@ -15,7 +15,10 @@ export const PokemonsProvider = ({ children }: PokemonsProviderProps) => {
     try {
       // const response = await api.get('pokemon' + `/${searchPokemon}`) // Passando o estado na url da requisição
       // const data = await response.data
-      setPokemons(pokemonDataBase)
+      localStorage.setItem('@pokemons/data', JSON.stringify(pokemonDataBase))
+      const getPokemonsLocalStorage = localStorage.getItem('@pokemons/data')
+      const pokemonsValuesParsed = JSON.parse(getPokemonsLocalStorage)
+      setPokemons(pokemonsValuesParsed)
     } catch (error) {
       console.log(error)
     }
