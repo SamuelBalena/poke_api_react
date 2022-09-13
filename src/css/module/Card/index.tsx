@@ -6,5 +6,9 @@ interface CardProps {
 }
 
 export function Card({ children }: CardProps) {
-  return <Item>{children}</Item>
+  return (
+    <Item size="normal" border="normal" shadow="normal">
+      {children}
+    </Item>
+  )
 }
