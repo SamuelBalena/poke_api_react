@@ -14,9 +14,7 @@ export const SearchInputContext = React.createContext<SearchInputContextProps>(
 )
 
 export const SearchInputProvider = ({ children }: PokemonsProviderProps) => {
-  // eslint-disable-next-line no-unused-vars
   const [searchInput, setSearchInput] = useState('')
-  console.log(searchInput, 'AQUI NO PROVIDER')
 
   return (
     <SearchInputContext.Provider value={{ searchInput, setSearchInput }}>

@@ -7,8 +7,8 @@ import { List } from './styles'
 
 export function PokemonList() {
   const [filteredPokemons, setFilteredPokemons] = useState<PokemonsProps[]>([])
-  const pokemons = usePokemonContext()
   const { searchInput } = useSearchContext()
+  const pokemons = usePokemonContext()
 
   useEffect(() => {
     // Está dentro de if para evitar redenrizações desnecessárias
@@ -23,9 +23,9 @@ export function PokemonList() {
 
   return (
     <div>
-      {filteredPokemons.length > 0 ? (
+      {searchInput.length > 0 ? (
         <List>
-          {filteredPokemons.map((pokemon) => {
+          {filteredPokemons.map((pokemon: PokemonsProps) => {
             return (
               <Card key={pokemon.id}>
                 <img src={pokemon.image} alt={pokemon.name} />
