@@ -7,6 +7,7 @@ import { Header } from './css/layout/Header'
 import { Navbar } from './css/layout/Navbar'
 import { Main } from './css/module/Main'
 import { SearchInputProvider } from './context/searchInputProvider'
+import { Footer } from './css/layout/Footer'
 
 GlobalStyles()
 
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Navbar />
         <Header />
         <Main />
+        <Footer />
       </SearchInputProvider>
     </PokemonsProvider>
   </React.StrictMode>

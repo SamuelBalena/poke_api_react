@@ -6,6 +6,7 @@ export const Container = styled('section', {
 })
 
 export const List = styled('ul', {
+  margin: '50px 0',
   display: 'grid',
   gridTemplateColumns: 'repeat(3, 1fr)',
   gridGap: '20px',

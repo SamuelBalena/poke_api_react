@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { usePokemonContext } from '../../../hooks/usePokemonContext'
 import { useSearchContext } from '../../../hooks/useSerchContext'
 import { PokemonsProps } from '../../../utils/PokemonsProps'
+import { Paragraph } from '../../base/Paragraph'
 import { Card } from '../Card'
 import { List } from './styles'
 
@@ -40,7 +41,7 @@ export function PokemonList() {
             return (
               <Card key={pokemon.id}>
                 <img src={pokemon.image} alt={pokemon.name} />
-                <p>{pokemon.name}</p>
+                <Paragraph font_size="md">{pokemon.name}</Paragraph>
               </Card>
             )
           })}
