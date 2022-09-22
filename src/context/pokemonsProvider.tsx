@@ -13,12 +13,12 @@ export const PokemonsProvider = ({ children }: PokemonsProviderProps) => {
 
   async function fetchData() {
     try {
-      // const response = await api.get('pokemon' + `/${searchPokemon}`) // Passando o estado na url da requisição
-      // const data = await response.data
       localStorage.setItem('@pokemons/data', JSON.stringify(pokemonDataBase))
       const getPokemonsLocalStorage = localStorage.getItem('@pokemons/data')
-      const pokemonsValuesParsed = JSON.parse(getPokemonsLocalStorage)
-      setPokemons(pokemonsValuesParsed)
+      if (getPokemonsLocalStorage) {
+        const pokemonsValuesParsed = JSON.parse(getPokemonsLocalStorage)
+        setPokemons(pokemonsValuesParsed)
+      }
     } catch (error) {
       console.log(error)
     }
