@@ -5,7 +5,7 @@ Este é um pequeno onde estou consumindo uma "api" de pokemons!
 
 # Link do projeto
 
-[Link text Here](https://pokemonreactapi.netlify.app/)
+[Link para o site](https://pokemonreactapi.netlify.app/)
 
 ## Rodando localmente
 
